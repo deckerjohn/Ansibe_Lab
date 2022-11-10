@@ -1,6 +1,6 @@
 name: deploy ansible
 
-on: [push]
+  on: [push]
     branches:
     - master
   pull_request:
