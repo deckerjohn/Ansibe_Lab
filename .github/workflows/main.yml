@@ -1,8 +1,8 @@
 - name: Play Ansible Playbook
   uses: arillso/action.playbook@master
   with:
-    playbook: tests/playbook.yml
-    inventory: tests/hosts.yml
+    playbook: playbook-01.yml
+    inventory: inventory
     galaxy_file: tests/requirements.yml
   env:
     ANSIBLE_HOST_KEY_CHECKING: 'false'
