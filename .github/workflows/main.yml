@@ -24,6 +24,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ./.github/actions/ansible
       with: 
-        playbook: playbook-01.yml
+        playbook: /playbooks/roles/Linux_Node/install-ansible.yml
         inventory: localhost
 
