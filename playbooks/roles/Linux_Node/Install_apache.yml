@@ -1,0 +1,10 @@
+---
+
+- hosts: Linux_Nodes
+  become: true
+  tasks:
+
+  - name: install apache2  
+    manager: apt # not required. choices: auto;rpm;apt;portage;pkg. The package manager used by the system so we can query the package information. Since 2.8 this is a list and can support multiple package managers per system. The 'portage' and 'pkg' options were added in version 2.8.
+    strategy: all # not required
+  name:  apache2
