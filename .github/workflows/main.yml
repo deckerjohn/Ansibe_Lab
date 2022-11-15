@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+jobs:
+
 uses: saubermacherag/ansible-playbook-docker-action@v1.4
 with:
   playbookName: 'simple-playbook.yml'
