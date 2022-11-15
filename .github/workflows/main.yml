@@ -1,0 +1,13 @@
+uses: saubermacherag/ansible-playbook-docker-action@v1.4
+with:
+  playbookName: 'simple-playbook.yml'
+  inventoryFile: 'my-inventory.yml'
+  requirementsFile: ".ansible/requirements.yml"
+  galaxyGithubUser: ${{ secrets.GITHUB_USER }}
+  galaxyGithubToken: ${{ secrets.Github_PAT }}
+  rolesPath: ".ansible/playbooks/roles"
+  keyFile: ".ansible/random-ssh-key.pem"
+  keyFileVaultPass: ${{ secrets.KEYFILE_VAULT_PASS }}
+  extraFile: ".ansible/extra.yml"
+  extraVars: "-e my_first_extra=${{ github.actor }} -e my_second_one=${{ github.sha }}"
+  verbosity: "vv"
